@@ -12,5 +12,10 @@ dependencies = [
     "requests"
 ]
 
+[project.urls]
+Homepage = "https://github.com/PoorRican/packaide_client"
+Repository = "https://github.com/PoorRican/packaide_client"
+Issues = "https://github.com/PoorRican/packaide_client/issues"
+
 [tool.setuptools]
 packages = ["packaide_client"]
