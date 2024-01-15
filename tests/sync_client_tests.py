@@ -1,7 +1,7 @@
 import unittest
 from xml.etree import ElementTree
 
-from sync import PackaideClient
+from packaide_client.sync import PackaideClient
 
 URL = "http://127.0.0.1:8000"
 

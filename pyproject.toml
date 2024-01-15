@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+version = "0.0.8"
+name = "packaide_client"
+requires-python = ">=3.7"
+dependencies = [
+    "pydantic",
+    "requests"
+]
+
+[tool.setuptools]
+packages = ["packaide_client"]
