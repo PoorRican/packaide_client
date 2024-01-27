@@ -65,7 +65,7 @@ class PackaideClient(object):
             tolerance=tolerance,
             offset=offset,
             rotations=rotations
-        ).model_dump_json()
+        ).model_dump()
 
         with requests.post(self._api_url, json=request) as response:
             if response.status_code == 200:

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 readme = "README.md"
-version = "1.0.1"
+version = "1.0.2"
 name = "packaide_client"
 requires-python = ">=3.7"
 dependencies = [
