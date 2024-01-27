@@ -5,11 +5,13 @@ This is a simple API wrapper that allows interaction with a [PackaideServer](htt
 The API allows for passing multiple SVG files to the server, which are then nested into one or more SVG files. The
 resulting SVG files are then returned to the client.
 
+
 ## Installation
 
 ```bash
 pip install packaide_client
 ```
+
 
 ## Usage
 
@@ -33,7 +35,10 @@ client = PackaideClient(URL)
 svg1 = "<svg>...</svg>"
 svg2 = "<svg>...</svg>"
 
-results = client.pack([svg1, svg2], height=60, width=40)  # Returns a list of SVGs
+results = client.pack([svg1, svg2], height=60, width=40,
+                      tolerance=.1,
+                      offset=5,
+                      rotations=4)  # Returns a list of SVGs
 
 # results can be passed to other functions
 for sheet in results:
@@ -44,3 +49,14 @@ for i, sheet in enumerate(results):
     with open(f"sheet_{i}.svg", "w") as f:
         f.write(sheet)
 ```
+
+
+## Parameters
+
+The `pack` method takes the following parameters:
+- `svgs`: A list of SVG strings to be nested
+- `height`: The height of the output SVG in inches
+- `width`: The width of the output SVG in inches
+- `tolerance`: The tolerance used when quantizing curves (Discretization tolerance)
+- `offset`: The offset distance around each shape (dilation)
+- `rotations`: The number of rotations to attempt when nesting shapes.
